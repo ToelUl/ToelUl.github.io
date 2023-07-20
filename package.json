@@ -24,7 +24,7 @@
     "hexo-renderer-multi-markdown-it": "^0.1.5",
     "hexo-renderer-stylus": "^3.0.0",
     "hexo-server": "^3.0.0",
-    "hexo-symbols-count-time": "^0.6.2",
+    "hexo-symbols-count-time": "^0.7.1",
     "hexo-theme-landscape": "^1.0.0",
     "markdown-it-furigana": "^1.0.1",
     "markdown-it-multimd-table": "^4.2.2",
