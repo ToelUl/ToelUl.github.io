@@ -14,7 +14,7 @@
   "dependencies": {
     "@zoon/puphpeteer": "github:zoonru/puphpeteer",
     "hexo": "^6.3.0",
-    "hexo-algoliasearch": "^0.3.2",
+    "hexo-algoliasearch": "^1.0.0",
     "hexo-autoprefixer": "^2.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
