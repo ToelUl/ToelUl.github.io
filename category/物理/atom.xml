@@ -4,12 +4,21 @@
     <title>Ray • Posts by &#34;物理&#34; category</title>
     <link href="http://ToelUl.github.io" />
     <updated>2023-07-20T06:19:33.000Z</updated>
+    <category term="布洛赫球面、高維空間、纖維叢、規範場論" />
     <entry>
-        <id>http://toelul.github.io/2023/07/20/physics-test/</id>
-        <title>test</title>
-        <link rel="alternate" href="http://toelul.github.io/2023/07/20/physics-test/"/>
-        <content type="html">&lt;p&gt;test&lt;/p&gt;
+        <id>http://toelul.github.io/2023/07/20/physics-Hopf-fibration/</id>
+        <title>從布洛赫球理解纖維叢理論與規範變換</title>
+        <link rel="alternate" href="http://toelul.github.io/2023/07/20/physics-Hopf-fibration/"/>
+        <content type="html">
+
+	&lt;div class=&#34;row&#34;&gt;
+    &lt;embed src=&#34;/pdf/Hopf_fibration.pdf&#34; width=&#34;100%&#34; height=&#34;550&#34; type=&#34;application/pdf&#34;&gt;
+	&lt;/div&gt;
+
+
+
 </content>
+        <category term="布洛赫球面、高維空間、纖維叢、規範場論" />
         <updated>2023-07-20T06:19:33.000Z</updated>
     </entry>
 </feed>

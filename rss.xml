@@ -5,14 +5,37 @@
         <link>http://ToelUl.github.io</link>
         <description></description>
         <language>zh-TW</language>
-        <pubDate>Thu, 20 Jul 2023 14:19:33 +0800</pubDate>
-        <lastBuildDate>Thu, 20 Jul 2023 14:19:33 +0800</lastBuildDate>
+        <pubDate>Thu, 20 Jul 2023 22:47:17 +0800</pubDate>
+        <lastBuildDate>Thu, 20 Jul 2023 22:47:17 +0800</lastBuildDate>
+        <category>布洛赫球面、高維空間、纖維叢、規範場論</category>
         <item>
-            <guid isPermalink="true">http://toelul.github.io/2023/07/20/physics-test/</guid>
-            <title>test</title>
-            <link>http://toelul.github.io/2023/07/20/physics-test/</link>
+            <guid isPermalink="true">http://toelul.github.io/2023/07/20/physics-form/</guid>
+            <title>微分形式與其在電磁學中的運用</title>
+            <link>http://toelul.github.io/2023/07/20/physics-form/</link>
+            <pubDate>Thu, 20 Jul 2023 22:47:17 +0800</pubDate>
+            <description><![CDATA[ 
+
+	&lt;div class=&#34;row&#34;&gt;
+    &lt;embed src=&#34;/pdf/Differential_forms.pdf&#34; width=&#34;100%&#34; height=&#34;550&#34; type=&#34;application/pdf&#34;&gt;
+	&lt;/div&gt;
+
+
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://toelul.github.io/2023/07/20/physics-Hopf-fibration/</guid>
+            <title>從布洛赫球理解纖維叢理論與規範變換</title>
+            <link>http://toelul.github.io/2023/07/20/physics-Hopf-fibration/</link>
+            <category>布洛赫球面、高維空間、纖維叢、規範場論</category>
             <pubDate>Thu, 20 Jul 2023 14:19:33 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;test&lt;/p&gt;
+            <description><![CDATA[ 
+
+	&lt;div class=&#34;row&#34;&gt;
+    &lt;embed src=&#34;/pdf/Hopf_fibration.pdf&#34; width=&#34;100%&#34; height=&#34;550&#34; type=&#34;application/pdf&#34;&gt;
+	&lt;/div&gt;
+
+
+
  ]]></description>
         </item>
         <item>

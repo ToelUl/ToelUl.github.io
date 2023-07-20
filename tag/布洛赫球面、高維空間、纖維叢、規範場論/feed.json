@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Ray • All posts by \"布洛赫球面、高維空間、纖維叢、規範場論\" tag",
+    "description": "",
+    "home_page_url": "http://ToelUl.github.io",
+    "items": [
+        {
+            "id": "http://toelul.github.io/2023/07/20/physics-Hopf-fibration/",
+            "url": "http://toelul.github.io/2023/07/20/physics-Hopf-fibration/",
+            "title": "從布洛赫球理解纖維叢理論與規範變換",
+            "date_published": "2023-07-20T06:19:33.000Z",
+            "content_html": "\n\n\t<div class=\"row\">\n    <embed src=\"/pdf/Hopf_fibration.pdf\" width=\"100%\" height=\"550\" type=\"application/pdf\">\n\t</div>\n\n\n\n",
+            "tags": [
+                "布洛赫球面、高維空間、纖維叢、規範場論"
+            ]
+        }
+    ]
+}
