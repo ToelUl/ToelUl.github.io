@@ -102,8 +102,6 @@ theme: shoka
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: ''
 
 markdown:
   render: # 渲染器设置
@@ -194,3 +192,8 @@ feed:
         enable: true
         template: "themes/shoka/layout/_alternate/json.ejs"
         output: "feed.json"
+
+deploy:
+  type: git
+  repo: https://github.com/ToelUl/ToelUl.github.io
+  branch: gh-pages
