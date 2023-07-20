@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://ToelUl.github.io</id>
+    <title>Hexo • Posts by &#34;物理&#34; category</title>
+    <link href="http://ToelUl.github.io" />
+    <updated>2023-07-20T06:19:33.000Z</updated>
+    <entry>
+        <id>http://toelul.github.io/2023/07/20/physics-test/</id>
+        <title>test</title>
+        <link rel="alternate" href="http://toelul.github.io/2023/07/20/physics-test/"/>
+        <content type="html">&lt;p&gt;test&lt;/p&gt;
+</content>
+        <updated>2023-07-20T06:19:33.000Z</updated>
+    </entry>
+</feed>

@@ -2,12 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>Hexo</title>
-        <subtitle></subtitle>
-        <icon>http://toelul.github.io/images/favicon.ico</icon>
         <link>http://ToelUl.github.io</link>
-        <author>
-          <name>李謙睿(Ray)</name>
-        </author>
         <description></description>
         <language>zh-TW</language>
         <pubDate>Thu, 20 Jul 2023 14:19:33 +0800</pubDate>
@@ -16,7 +11,6 @@
             <guid isPermalink="true">http://toelul.github.io/2023/07/20/physics-test/</guid>
             <title>test</title>
             <link>http://toelul.github.io/2023/07/20/physics-test/</link>
-            <category term="物理" scheme="http://toelul.github.io/categories/physics/" />
             <pubDate>Thu, 20 Jul 2023 14:19:33 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;test&lt;/p&gt;
  ]]></description>
