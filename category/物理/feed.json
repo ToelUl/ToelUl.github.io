@@ -1,9 +1,29 @@
 {
     "version": "https://jsonfeed.org/version/1",
-    "title": "Ray • All posts by \"物理\" category",
-    "description": "",
+    "title": "我們會竭盡所能，盡快證明自己是錯誤的，唯有如此我們才能進步。 • All posts by \"物理\" category",
+    "description": "究極の物理",
     "home_page_url": "http://ToelUl.github.io",
     "items": [
+        {
+            "id": "http://toelul.github.io/2023/07/21/physics-%E6%A5%8A-%E7%B1%B3%E7%88%BE%E6%96%AF%E7%90%86%E8%AB%96%E7%9A%84%E6%BA%90%E8%B5%B7%E3%80%81%E5%85%A7%E5%AE%B9%E8%88%87%E7%99%BC%E5%B1%95/",
+            "url": "http://toelul.github.io/2023/07/21/physics-%E6%A5%8A-%E7%B1%B3%E7%88%BE%E6%96%AF%E7%90%86%E8%AB%96%E7%9A%84%E6%BA%90%E8%B5%B7%E3%80%81%E5%85%A7%E5%AE%B9%E8%88%87%E7%99%BC%E5%B1%95/",
+            "title": "楊-米爾斯理論的源起、內容與發展",
+            "date_published": "2023-07-21T15:21:09.000Z",
+            "content_html": "\n\n\t<div class=\"row\">\n    <embed src=\"/pdf/Yang_Mills.pdf\" width=\"100%\" height=\"550\" type=\"application/pdf\">\n\t</div>\n\n\n",
+            "tags": [
+                "楊-米爾斯理論、規範場論、非阿貝爾規範場"
+            ]
+        },
+        {
+            "id": "http://toelul.github.io/2023/07/20/physics-form/",
+            "url": "http://toelul.github.io/2023/07/20/physics-form/",
+            "title": "微分形式與其在電磁學中的運用",
+            "date_published": "2023-07-20T14:47:17.000Z",
+            "content_html": "\n\n\t<div class=\"row\">\n    <embed src=\"/pdf/Differential_forms.pdf\" width=\"100%\" height=\"550\" type=\"application/pdf\">\n\t</div>\n\n\n",
+            "tags": [
+                "格拉斯曼代數、張量、電磁學"
+            ]
+        },
         {
             "id": "http://toelul.github.io/2023/07/20/physics-Hopf-fibration/",
             "url": "http://toelul.github.io/2023/07/20/physics-Hopf-fibration/",

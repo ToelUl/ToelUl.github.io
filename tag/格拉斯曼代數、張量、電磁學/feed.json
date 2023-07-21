@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "我們會竭盡所能，盡快證明自己是錯誤的，唯有如此我們才能進步。 • All posts by \"格拉斯曼代數、張量、電磁學\" tag",
+    "description": "究極の物理",
+    "home_page_url": "http://ToelUl.github.io",
+    "items": [
+        {
+            "id": "http://toelul.github.io/2023/07/20/physics-form/",
+            "url": "http://toelul.github.io/2023/07/20/physics-form/",
+            "title": "微分形式與其在電磁學中的運用",
+            "date_published": "2023-07-20T14:47:17.000Z",
+            "content_html": "\n\n\t<div class=\"row\">\n    <embed src=\"/pdf/Differential_forms.pdf\" width=\"100%\" height=\"550\" type=\"application/pdf\">\n\t</div>\n\n\n",
+            "tags": [
+                "格拉斯曼代數、張量、電磁學"
+            ]
+        }
+    ]
+}
