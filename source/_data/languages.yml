@@ -1,27 +1,25 @@
 # language
-zh-CN:
-  # items
-  favicon:
-    show: 不负韶华
-    hide: 以梦为马！
+# zh-CN:
+#   # items
+#   favicon:
+#     show: 不负韶华
+#     hide: 以梦为马！
     
-zh-HK:
-  favicon:
-    show: 不负韶华
-    hide: 以梦为马！
+# zh-HK:
+#   favicon:
+#     show: 不负韶华
+#     hide: 以梦为马！
 
 zh-TW:
   favicon:
-    show: 清華物理
-    hide: 清華大學
-  menu: 
-    friends: 連結 
-en:
-  favicon:
-    show: 不负韶华
-    hide: 以梦为马！
+    show: 物理
+    hide: 李謙睿
+# en:
+#   favicon:
+#     show: 不负韶华
+#     hide: 以梦为马！
 
-ja:
-  favicon:
-    show: 不负韶华
-    hide: 以梦为马！
+# ja:
+#   favicon:
+#     show: 不负韶华
+#     hide: 以梦为马！

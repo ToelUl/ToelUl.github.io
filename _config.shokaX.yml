@@ -2,7 +2,6 @@
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
-
 # Assets
 statics: / #//cdn.jsdelivr.net/gh/username/RepositoryName@latest/
 css: css
@@ -19,7 +18,14 @@ darkmode: #true
 # if `false`, automatic positioning will be turned off
 auto_scroll: true
 
-
+# menu:
+#   home: / || home
+#   about: /about/ || user
+#   submenu:
+#     default: /page/ || user
+#     link: /page1/ || cloud
+#   link2: /page2/ || coffee
+  
 menu:
   home: / || home
   about: /about/ || user
@@ -128,4 +134,14 @@ post:
 
 experiments:
   optimizeLongPosts: true # 开启长文章优化
+
+
+# performance:
+#   # 使用preconnect预加载的网址(不建议超过三个)
+#   preConnect:
+#     - "https://lf9-cdn-tos.bytecdntp.com"
+#   # 使用dns-prefetch预解析的网址
+#   dnsPrefetch:
+#     - "https://cdn.jsdelivr.net"
+#     - "https://unpkg.com"
 

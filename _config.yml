@@ -1,11 +1,11 @@
 # Site
-title: Ray
-subtitle: ''
-description: ''
-keywords:
+title: 我們會竭盡所能，盡快證明自己是錯誤的，唯有如此我們才能進步。
+subtitle: 我不能創造的東西，我就不瞭解。
+description: 究極の物理
+keywords: 究極の物理
 author: 李謙睿(Ray)
 language: zh-TW
-timezone: ''
+# timezone: 
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -171,7 +171,7 @@ iconfont: "1832207_igi8uaupcus"
 # Reward (Donate)
 reward:
   # If true, reward will be displayed in every article by default.
-  enable: true
+  enable: false
   account:
     wechatpay: /wechatpay.png
     alipay: /alipay.png
@@ -233,14 +233,14 @@ valine:
       # - hash of investor1@email.com
 
 # bgm
-audio:
-  - title: 列表1
-    list:
-     - https://music.163.com/#/playlist?id=2943811283
-     - https://music.163.com/#/playlist?id=2297706586
-  - title: 列表2
-    list:
-     - https://music.163.com/#/playlist?id=2031842656
+# audio:
+#   - title: 列表1
+#     list:
+#      - https://music.163.com/#/playlist?id=2943811283
+#      - https://music.163.com/#/playlist?id=2297706586
+#   - title: 列表2
+#     list:
+#      - https://music.163.com/#/playlist?id=2031842656
 
 # random image api
 image_server: # "https://acg.xydwz.cn/api/api.php"
@@ -291,106 +291,10 @@ vendors:
     chart: npm/frappe-charts@1.5.0/dist/frappe-charts.min.iife.min.js
 
 
-performance:
-  # 使用preconnect预加载的网址(不建议超过三个)
-  preConnect:
-    - "https://lf9-cdn-tos.bytecdntp.com"
-  # 使用dns-prefetch预解析的网址
-  dnsPrefetch:
-    - "https://cdn.jsdelivr.net"
-    - "https://unpkg.com"
-
-markdown:
-  render:  # 渲染器设置
-    html: true # 过滤 HTML 标签
-    xhtmlOut: false # 使用 '/' 来闭合单标签 （比如 <br />）。
-    breaks: true # 转换段落里的 '\n' 到 <br>。
-    linkify: true # 将类似 URL 的文本自动转换为链接。
-    typographer: 
-    quotes: '“”‘’'
-  plugins: # markdown-it 插件设置
-    - plugin:
-        name: markdown-it-toc-and-anchor
-        enable: true
-        options: # 文章目录以及锚点应用的 class 名称，shoka 系主题必须设置成这样
-          tocClassName: 'toc'
-          anchorClassName: 'anchor'
-    - plugin:
-        name: markdown-it-multimd-table
-        enable: true
-        options:
-          multiline: true
-          rowspan: true
-          headerless: true
-    - plugin:
-        name: ./markdown-it-furigana
-        enable: true
-        options:
-          fallbackParens: "()"
-    - plugin:
-        name: ./markdown-it-spoiler
-        enable: true
-        options:
-          title: "你知道得太多了"
-
 autoprefixer:
   exclude:
     - '*.min.css'
 
-
-# minify:
-#   html:
-#     enable: true
-#     exclude: # 排除 hexo-feed 用到的模板文件
-#       - '**/json.ejs'
-#       - '**/atom.ejs'
-#       - '**/rss.ejs'
-#   css:
-#     enable: true
-#     exclude:
-#       - '**/*.min.css'
-#   js:
-#     enable: true
-#     mangle:
-#       # toplevel: true #如果js压缩错误请删除此行
-#     output:
-#     compress:
-#       ecma: 2018
-#     exclude:
-#       - '**/*.min.js'
-
-# algolia:
-#   appId: #Your appId
-#   apiKey: #Your apiKey
-#   adminApiKey: #Your adminApiKey
-#   chunkSize: 5000
-#   indexName: #"shokax"
-#   fields:
-#     - title #必须配置
-#     - path #必须配置
-#     - categories #推荐配置
-#     - content:strip:truncate,0,2000
-#     - gallery
-#     - photos
-#     - tags
-
-# feed:
-#   limit: 20
-#   order_by: "-date"
-#   tag_dir: false
-#   category_dir: false
-#   rss:
-#     enable: true
-#     template: "themes/shokax/layout/_alternate/rss.ejs"
-#     output: "rss.xml"
-#   atom:
-#     enable: true
-#     template: "themes/shokax/layout/_alternate/atom.ejs"
-#     output: "atom.xml"
-#   jsonFeed:
-#     enable: true
-#     template: "themes/shokax/layout/_alternate/json.ejs"
-#     output: "feed.json"
 
 deploy:
   type: git
