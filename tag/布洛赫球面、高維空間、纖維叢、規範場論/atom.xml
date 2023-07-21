@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://ToelUl.github.io</id>
-    <title>我們會竭盡所能，盡快證明自己是錯誤的，唯有如此我們才能進步。 • Posts by &#34;布洛赫球面、高維空間、纖維叢、規範場論&#34; tag</title>
+    <title>我們會竭盡所能，盡快證明我們是錯誤的，唯有如此我們才能進步。 • Posts by &#34;布洛赫球面、高維空間、纖維叢、規範場論&#34; tag</title>
     <link href="http://ToelUl.github.io" />
     <updated>2023-07-20T06:19:33.000Z</updated>
-    <category term="格拉斯曼代數、張量、電磁學" />
     <category term="布洛赫球面、高維空間、纖維叢、規範場論" />
+    <category term="格拉斯曼代數、張量、電磁學" />
     <category term="楊-米爾斯理論、規範場論、非阿貝爾規範場" />
     <entry>
         <id>http://toelul.github.io/2023/07/20/physics-Hopf-fibration/</id>
