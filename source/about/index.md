@@ -2,7 +2,7 @@
 title: about
 date: 2023-01-01 00:00:00
 ---
-你好
+你好，重新整理有驚喜。
 
 <!-- https://cdn.jsdelivr.net/npm/sakana-widget@2.5.0/lib/sakana.min.css -->
 <!-- https://cdn.jsdelivr.net/npm/sakana-widget@2.5.0/lib/sakana.min.js -->

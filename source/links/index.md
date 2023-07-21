@@ -3,20 +3,10 @@ title: links
 date: 2023-01-01 00:00:00
 ---
 {% links %}
-- site: 優萌初華
-  owner: 霜月琉璃
-  url: https://shoka.lostyu.me
-  desc: 琉璃的医学 & 编程笔记
-  image: https://cdn.jsdelivr.net/gh/amehime/shoka@latest/images/avatar.jpg
+- site: 維基語錄
+  owner: 維基語錄
+  url: https://zh.wikiquote.org/zh-tw/%E8%B2%BB%E6%9B%BC
+  desc: 費曼語錄
+  image: https://imgs.cwgv.com.tw/peoples/48/348/author/thumb/348.png
   color: "#e9546b"
-
-- site: 優萌初華
-  owner: 霜月琉璃
-  url: https://shoka.lostyu.me
-  image: images/avatar.jpg
-
-- site: 優萌初華
-  url: https://shoka.lostyu.me
-  desc: 琉璃的医学 & 编程笔记
-  color: "#9d5b8b"
 {% endlinks %}
