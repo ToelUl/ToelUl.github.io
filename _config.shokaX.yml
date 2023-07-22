@@ -132,8 +132,8 @@ post:
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 
-experiments:
-  optimizeLongPosts: true # 开启长文章优化
+# experiments:
+#   optimizeLongPosts: true # 开启长文章优化
 
 
 # performance:
