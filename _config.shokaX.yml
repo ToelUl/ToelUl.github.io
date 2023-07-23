@@ -63,7 +63,7 @@ sidebar:
   position: left
   # position: right
   # Replace the default avatar image and set the url here.
-  avatar: avatar_2.jpg
+  avatar: avatar.jpg
 
 widgets:
   # if true, will show random posts
