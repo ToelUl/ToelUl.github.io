@@ -2,6 +2,7 @@
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
+alternate: Physics # 站点大标题
 # Assets
 statics: / #//cdn.jsdelivr.net/gh/username/RepositoryName@latest/
 css: css
