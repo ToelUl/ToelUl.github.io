@@ -87,62 +87,33 @@ post:
   # Dependencies: https://github.com/theme-next/hexo-symbols-count-time
   count: true
 
-# ---------------------------------------------------------------
-# analytics & SEO Settings
-# ---------------------------------------------------------------
-# Metadata elements
-## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
-# meta_generator: true
+# bgm
+audio:
+ - title: 列表1
+   list:
+    - https://music.163.com/#/song?id=469772
+    - https://music.163.com/#/song?id=469742
+    - https://music.163.com/#/song?id=469933
+    - https://music.163.com/#/song?id=469868
+    - https://music.163.com/#/song?id=469821
+    - https://music.163.com/#/song?id=29482202
+    - https://music.163.com/#/song?id=30569548
+    #  - https://music.163.com/#/song?id=2034742057
+#      - https://music.163.com/#/playlist?id=2297706586
+#   - title: 列表2
+#     list:
+#      - https://music.163.com/#/playlist?id=2031842656
 
-# seo: # 下方直接填入对应meta的content即可
-#   bing: 
-#   google: 
-#   yandex:
-#   baidu:
-
-# visitor:
-#   baiduAnalytics: # 百度统计代码中的?后部分
-
-# baidu_analytics: # <app_id>
-
-# # Disable Baidu transformation on mobile devices.
-# disable_baidu_transformation: true
-
-# # Automatically add external URL with Base64 encrypt & decrypt.
-# exturl: true
-
-# # Google Webmaster tools verification.
-# # See: https://www.google.com/webmasters
-# google_site_verification:
-
-# # Bing Webmaster tools verification.
-# # See: https://www.bing.com/webmaster
-# bing_site_verification:
-
-# # Yandex Webmaster tools verification.
-# # See: https://webmaster.yandex.ru
-# yandex_site_verification:
-
-# # Baidu Webmaster tools verification.
-# # See: https://ziyuan.baidu.com/site
-# baidu_site_verification:
-
-# # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO.
-# baidu_push: false
-
-# Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
-
-# experiments:
-#   optimizeLongPosts: true # 开启长文章优化
-
-
-# performance:
-#   # 使用preconnect预加载的网址(不建议超过三个)
-#   preConnect:
-#     - "https://lf9-cdn-tos.bytecdntp.com"
-#   # 使用dns-prefetch预解析的网址
-#   dnsPrefetch:
-#     - "https://cdn.jsdelivr.net"
-#     - "https://unpkg.com"
+# 实验性特性
+experiments:
+  noIE: true # TODO 阻止IE浏览器访问(ShokaX不支持IE的任何版本)
+  noPlayer: false # 禁用音乐播放器
+  gradient: false # 使用CSS渐变作为文章封面
+  fixedCover: "" # 主页面cover(为空则使用bing随机图片)
+  debug: false # 使用debug模式启动
+  disableThemeComment: false # 禁用主题评论系统(一般用于关闭评论或让插件接管评论系统)
+  usingRelative: false # _image.yml 使用相对路径
+  optimizeLongPosts: false # 优化长文章，这能让长文章的FPS提升70%-150%并解决假死问题，但存在一些副作用
+  # 具体见https://docs.kaitaku.xyz/guide/theme.html#%E9%95%BF%E6%96%87%E7%AB%A0%E4%BC%98%E5%8C%96
+  mobileWidth: 820px # 移动版和桌面版导航栏最短切换长度
 
