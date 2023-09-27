@@ -29,7 +29,7 @@
     "hexo-symbols-count-time": "^0.6.2",
     "hexo-theme-landscape": "^1.0.0",
     "hexo-theme-shokax": "^0.2.10",
-    "markdown-it": "^13.0.1",
+    "markdown-it": "^13.0.2",
     "markdown-it-furigana": "^1.0.1",
     "markdown-it-multimd-table": "^4.2.2",
     "markdown-it-spoiler": "^1.1.1",
