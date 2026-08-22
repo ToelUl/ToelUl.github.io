@@ -11,7 +11,8 @@ doi_url: "https://doi.org/10.5281/zenodo.20606513"
 zenodo_url: "https://zenodo.org/records/20606513"
 github_url: "https://github.com/ToelUl/adm-to-ashtekar-notes"
 pdf_external_url: "https://github.com/ToelUl/adm-to-ashtekar-notes/blob/main/main.pdf"
-pdf_local: false
+pdf_source_url: "https://raw.githubusercontent.com/ToelUl/adm-to-ashtekar-notes/main/main.pdf"
+pdf_local: true
 scholar_index: true
 selected: true
 note: true
