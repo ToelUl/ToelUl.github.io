@@ -1,0 +1,35 @@
+- name: "Flow-to-Field"
+  url: "https://github.com/ToelUl/Flow-to-Field"
+  description: "Flow Matching as a reusable, physically informed initializer for Monte Carlo simulations of many-body systems."
+  tags: ["Flow Matching", "MCMC", "PyTorch", "many-body physics"]
+  selected: true
+
+- name: "Lattice-gauge-equivariant-CNN"
+  url: "https://github.com/ToelUl/Lattice-gauge-equivariant-CNN"
+  description: "A modular lattice-gauge-equivariant CNN framework with U(1) and SU(2) demonstrations and explicit mathematical structure."
+  tags: ["equivariance", "lattice gauge theory", "deep learning"]
+  selected: true
+
+- name: "Lattice-Field-MCMC-GPU"
+  url: "https://github.com/ToelUl/Lattice-Field-MCMC-GPU"
+  description: "GPU-accelerated Markov-chain Monte Carlo notebooks for lattice field and spin models, including 2D phi^4, Ising, Potts, and XY systems."
+  tags: ["GPU", "MCMC", "lattice field theory"]
+  selected: true
+
+- name: "EfficientSVD"
+  url: "https://github.com/ToelUl/EfficientSVD"
+  description: "Compact numerical tooling focused on efficient singular-value decomposition workflows."
+  tags: ["linear algebra", "scientific computing"]
+  selected: false
+
+- name: "Einstein-tensor-calculator"
+  url: "https://github.com/ToelUl/Einstein-tensor-calculator"
+  description: "A small scientific-computing utility for tensor calculations in general relativity."
+  tags: ["general relativity", "symbolic computation"]
+  selected: false
+
+- name: "quantum-simulation"
+  url: "https://github.com/ToelUl/quantum-simulation"
+  description: "Research-oriented numerical experiments and utilities for quantum-system simulation."
+  tags: ["quantum physics", "simulation"]
+  selected: false
