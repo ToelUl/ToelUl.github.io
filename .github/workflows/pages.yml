@@ -28,6 +28,14 @@ jobs:
         with:
           source: ./
           destination: ./_site
+      - name: Stage Scholar PDF
+        run: |
+          mkdir -p _site/publications/2026-adm-ashtekar
+          curl --fail --location --silent --show-error \
+            https://raw.githubusercontent.com/ToelUl/adm-to-ashtekar-notes/main/main.pdf \
+            --output _site/publications/2026-adm-ashtekar/paper.pdf
+          test -s _site/publications/2026-adm-ashtekar/paper.pdf
+          test $(stat -c%s _site/publications/2026-adm-ashtekar/paper.pdf) -le 5242880
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
 
