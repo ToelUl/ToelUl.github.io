@@ -1,0 +1,19 @@
+---
+title: "Notes"
+permalink: /notes/
+---
+<h1>Research & pedagogical notes</h1>
+<p class="lead">Long-form technical notes and teaching-oriented derivations that are useful as citable research resources but are kept distinct from peer-reviewed publications.</p>
+
+<div class="pub-list full">
+{% assign notes = site.publications | where: 'note', true | sort: 'year' | reverse %}
+{% for pub in notes %}{% include publication-item.html pub=pub %}{% endfor %}
+</div>
+
+<section>
+  <h2>Working lecture notes</h2>
+  <article class="card prose-card">
+    <h3><a href="https://github.com/ToelUl/solvable-quantum-many-body-models">Solvable Quantum Many-Body Models in Condensed Matter</a></h3>
+    <p>A working set of lecture notes organized around mother models, equivalence maps, and shared solution mechanisms, including Jordan–Wigner mappings, BdG reductions, transfer matrices, dualities, Bethe ansatz, stabilizer constructions, and Kitaev-type models.</p>
+  </article>
+</section>
