@@ -1,0 +1,17 @@
+name: Validate academic metadata
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+
+jobs:
+  metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Validate publication records
+        run: python scripts/validate_publications.py
