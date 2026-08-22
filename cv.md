@@ -1,6 +1,7 @@
 ---
 title: "CV"
 permalink: /cv/
+description: "Web CV of Qian-Rui Lee, PhD student in physics at National Tsing Hua University."
 ---
 # Curriculum vitae
 
@@ -9,18 +10,32 @@ permalink: /cv/
 **PhD Student in Physics**  
 Department of Physics, National Tsing Hua University, Hsinchu, Taiwan
 
-## Research areas
+## Research profile
 
-Quantum many-body physics; critical phenomena; machine learning for physics; generative modeling; lattice field theory; geometric and mathematical physics; scientific computing.
+Theoretical and computational many-body physics; critical phenomena; machine learning for physics; generative modeling and scientific sampling; quantum and geometric structures; lattice field theory; scientific computing.
 
-## Selected publications
+## Academic profiles
 
-{% assign selected = site.publications | where: 'selected', true | sort: 'year' | reverse %}
-{% for pub in selected %}
-- **{{ pub.title }}** — {{ pub.authors | join: ', ' }}. {{ pub.venue }}, {{ pub.year }}.
+- [Google Scholar]({{ site.data.profile.google_scholar }})
+- [ORCID]({{ site.data.profile.orcid }})
+- [GitHub]({{ site.data.profile.github }})
+- [LinkedIn]({{ site.data.profile.linkedin }})
+
+## Publications & preprints
+
+{% assign research_outputs = site.publications | where_exp: 'pub', "pub.category != 'note'" | sort: 'year' | reverse %}
+{% for pub in research_outputs %}
+- **[{{ pub.title }}]({{ pub.url | relative_url }})** — {{ pub.authors | join: ', ' }}. {{ pub.type_label }}, {{ pub.venue }}, {{ pub.year }}.
 {% endfor %}
 
-## Selected software
+## Technical & pedagogical notes
+
+{% assign notes = site.publications | where: 'note', true | sort: 'year' | reverse %}
+{% for pub in notes %}
+- **[{{ pub.title }}]({{ pub.url | relative_url }})** — {{ pub.venue }}, {{ pub.year }}.
+{% endfor %}
+
+## Selected research software
 
 {% assign software = site.data.software | where: 'selected', true %}
 {% for item in software %}
