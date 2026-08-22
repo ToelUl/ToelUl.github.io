@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include header.html %}
+  <main class="shell main-content publication-page">
+    <p class="eyebrow">{{ page.type_label | default: 'Publication' }} · {{ page.year }}</p>
+    <h1>{{ page.title }}</h1>
+    <p class="lead authors">{{ page.authors | join: ', ' }}</p>
+    <p class="venue-line">{{ page.venue }}</p>
+
+    <div class="action-row">
+      {% if page.doi_url %}<a class="button primary" href="{{ page.doi_url }}">DOI</a>{% endif %}
+      {% if page.arxiv_url %}<a class="button" href="{{ page.arxiv_url }}">arXiv</a>{% endif %}
+      {% if page.zenodo_url %}<a class="button" href="{{ page.zenodo_url }}">Zenodo</a>{% endif %}
+      {% if page.github_url %}<a class="button" href="{{ page.github_url }}">GitHub</a>{% endif %}
+      {% if page.pdf_local %}<a class="button" href="{{ page.url | append: 'paper.pdf' | relative_url }}">PDF</a>{% elsif page.pdf_external_url %}<a class="button" href="{{ page.pdf_external_url }}">PDF</a>{% endif %}
+    </div>
+
+    <section>
+      <h2>Abstract</h2>
+      {{ content }}
+    </section>
+
+    {% if page.bibtex %}
+    <section>
+      <h2>Citation</h2>
+      <pre class="bibtex"><code>{{ page.bibtex }}</code></pre>
+    </section>
+    {% endif %}
+
+    {% if page.scholar_index %}
+    <aside class="indexing-note">
+      <strong>Indexing note.</strong> This page exposes machine-readable Highwire-style citation metadata for scholarly crawlers.
+      {% unless page.pdf_local %}The local PDF tag is intentionally disabled until a copy of the PDF is placed in this page's directory.{% endunless %}
+    </aside>
+    {% endif %}
+  </main>
+  {% include footer.html %}
+</body>
+</html>

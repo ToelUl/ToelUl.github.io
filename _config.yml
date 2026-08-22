@@ -1,0 +1,34 @@
+title: "Qian-Rui Lee"
+description: "Academic homepage of Qian-Rui Lee — physics, quantum many-body systems, machine learning, and scientific computing."
+url: "https://toelul.github.io"
+baseurl: ""
+lang: "en"
+timezone: "Asia/Taipei"
+
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+collections:
+  publications:
+    output: true
+    permalink: /publications/:name/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: publication
+
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - scripts

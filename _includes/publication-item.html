@@ -1,0 +1,15 @@
+<article class="pub-item">
+  <div class="pub-year">{{ include.pub.year }}</div>
+  <div>
+    <h3><a href="{{ include.pub.url | relative_url }}">{{ include.pub.title }}</a></h3>
+    <p class="pub-authors">{{ include.pub.authors | join: ', ' }}</p>
+    <p class="pub-venue">{{ include.pub.venue }}</p>
+    <div class="pub-links">
+      <a href="{{ include.pub.url | relative_url }}">Abstract</a>
+      {% if include.pub.doi_url %}<a href="{{ include.pub.doi_url }}">DOI</a>{% endif %}
+      {% if include.pub.arxiv_url %}<a href="{{ include.pub.arxiv_url }}">arXiv</a>{% endif %}
+      {% if include.pub.zenodo_url %}<a href="{{ include.pub.zenodo_url }}">Zenodo</a>{% endif %}
+      {% if include.pub.github_url %}<a href="{{ include.pub.github_url }}">GitHub</a>{% endif %}
+    </div>
+  </div>
+</article>

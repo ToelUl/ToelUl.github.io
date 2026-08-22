@@ -1,0 +1,10 @@
+<footer class="site-footer">
+  <div class="shell footer-inner">
+    <p>© {{ 'now' | date: '%Y' }} {{ site.data.profile.name }}.</p>
+    <p class="footer-links">
+      <a href="{{ site.data.profile.github }}">GitHub</a>
+      {% if site.data.profile.google_scholar != '' %}<a href="{{ site.data.profile.google_scholar }}">Google Scholar</a>{% endif %}
+      {% if site.data.profile.orcid != '' %}<a href="{{ site.data.profile.orcid }}">ORCID</a>{% endif %}
+    </p>
+  </div>
+</footer>
