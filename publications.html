@@ -1,16 +1,32 @@
 ---
 title: "Publications"
 permalink: /publications/
-description: "Publications, preprints, and technical notes by Qian-Rui Lee."
+description: "Peer-reviewed publications, preprints, and technical notes by Qian-Rui Lee."
 ---
 <h1>Publications</h1>
-<p class="lead">Journal articles, preprints, and technical or pedagogical notes. Each work has a stable landing page with bibliographic metadata and links to authoritative versions.</p>
+<p class="lead">Research outputs are separated by publication status. Each work has a stable landing page with bibliographic metadata and links to authoritative versions.</p>
 
-{% assign pubs = site.publications | sort: 'year' | reverse %}
-{% assign current_year = '' %}
-<div class="pub-list full">
-{% for pub in pubs %}
-  {% if pub.year != current_year %}<h2 class="year-heading">{{ pub.year }}</h2>{% assign current_year = pub.year %}{% endif %}
-  {% include publication-item.html pub=pub %}
-{% endfor %}
-</div>
+{% assign journals = site.publications | where: 'category', 'journal' | sort: 'year' | reverse %}
+{% assign preprints = site.publications | where: 'category', 'preprint' | sort: 'year' | reverse %}
+{% assign notes = site.publications | where: 'note', true | sort: 'year' | reverse %}
+
+{% if journals.size > 0 %}
+<section>
+  <h2>Peer-reviewed journal articles</h2>
+  <div class="pub-list full">{% for pub in journals %}{% include publication-item.html pub=pub %}{% endfor %}</div>
+</section>
+{% endif %}
+
+{% if preprints.size > 0 %}
+<section>
+  <h2>Preprints</h2>
+  <div class="pub-list full">{% for pub in preprints %}{% include publication-item.html pub=pub %}{% endfor %}</div>
+</section>
+{% endif %}
+
+{% if notes.size > 0 %}
+<section>
+  <h2>Technical & pedagogical notes</h2>
+  <div class="pub-list full">{% for pub in notes %}{% include publication-item.html pub=pub %}{% endfor %}</div>
+</section>
+{% endif %}
