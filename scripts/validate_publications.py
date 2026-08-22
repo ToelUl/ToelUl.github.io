@@ -24,10 +24,15 @@ for path in sorted(PUBS.glob("*.md")):
         if "pdf_local: true" in front:
             slug = path.stem
             pdf = ROOT / "publications" / slug / "paper.pdf"
-            if not pdf.exists():
-                errors.append(f"{path.name}: pdf_local=true but {pdf.relative_to(ROOT)} is missing")
-            elif pdf.stat().st_size > 5 * 1024 * 1024:
-                errors.append(f"{path.name}: local PDF exceeds Google Scholar's 5 MB guideline")
+            has_source = bool(re.search(r"(?m)^pdf_source_url:\s*\"?https?://", front))
+            if pdf.exists():
+                if pdf.stat().st_size > 5 * 1024 * 1024:
+                    errors.append(f"{path.name}: local PDF exceeds Google Scholar's 5 MB guideline")
+            elif not has_source:
+                errors.append(
+                    f"{path.name}: pdf_local=true requires either {pdf.relative_to(ROOT)} "
+                    "or a pdf_source_url staged by the deployment workflow"
+                )
 
 if errors:
     print("Publication validation failed:")
