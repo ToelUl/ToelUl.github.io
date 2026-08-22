@@ -4,6 +4,7 @@ authors:
   - "Qian-Rui Lee"
 year: 2026
 citation_date: "2026/06/09"
+category: "note"
 type_label: "Technical note"
 venue: "Zenodo technical note"
 doi: "10.5281/zenodo.20606513"

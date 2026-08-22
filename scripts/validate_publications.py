@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-"""Minimal publication metadata guard for the academic site."""
+"""Publication metadata guard for the academic site."""
 from pathlib import Path
 import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 PUBS = ROOT / "_publications"
-required = ["title", "authors", "year", "venue"]
+required = ["title", "authors", "year", "venue", "type_label", "category"]
+allowed_categories = {"journal", "preprint", "note"}
 errors = []
 
 for path in sorted(PUBS.glob("*.md")):
@@ -18,6 +19,11 @@ for path in sorted(PUBS.glob("*.md")):
     for key in required:
         if not re.search(rf"(?m)^{re.escape(key)}:\s*", front):
             errors.append(f"{path.name}: missing {key}")
+
+    category_match = re.search(r'(?m)^category:\s*["\']?([^"\'\n]+)', front)
+    if category_match and category_match.group(1).strip() not in allowed_categories:
+        errors.append(f"{path.name}: unsupported category {category_match.group(1).strip()!r}")
+
     if "scholar_index: true" in front:
         if not re.search(r"(?m)^citation_date:\s*", front):
             errors.append(f"{path.name}: Scholar-indexed page missing citation_date")

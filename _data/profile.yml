@@ -2,14 +2,15 @@ name: "Qian-Rui Lee"
 role: "PhD Student in Physics"
 affiliation: "Department of Physics, National Tsing Hua University"
 location: "Hsinchu, Taiwan"
-tagline: "Quantum many-body physics · Statistical field theory · Machine learning for physics"
+tagline: "Quantum many-body physics · Critical phenomena · Machine learning for physics"
 bio: >-
-  I work at the interface of theoretical and computational physics and machine learning,
-  with particular interests in quantum many-body systems, critical phenomena, geometric
-  formulations of physics, generative modeling, and efficient scientific computation.
+  I work on theoretical and computational many-body physics and machine learning methods for physics,
+  with particular interests in critical phenomena, quantum and geometric structures, generative models
+  for scientific sampling, and efficient numerical methods.
 
 github: "https://github.com/ToelUl"
-google_scholar: ""
-orcid: ""
+google_scholar: "https://scholar.google.com/citations?user=0kikVlsAAAAJ&hl=en"
+orcid: "https://orcid.org/0009-0009-2250-2419"
+linkedin: "https://www.linkedin.com/in/qian-rui-lee-ba1788248/"
 email: ""
 cv_pdf: ""

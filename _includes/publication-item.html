@@ -3,7 +3,7 @@
   <div>
     <h3><a href="{{ include.pub.url | relative_url }}">{{ include.pub.title }}</a></h3>
     <p class="pub-authors">{{ include.pub.authors | join: ', ' }}</p>
-    <p class="pub-venue">{{ include.pub.venue }}</p>
+    <p class="pub-venue"><strong>{{ include.pub.type_label }}</strong> · {{ include.pub.venue }}</p>
     <div class="pub-links">
       <a href="{{ include.pub.url | relative_url }}">Abstract</a>
       {% if include.pub.doi_url %}<a href="{{ include.pub.doi_url }}">DOI</a>{% endif %}
