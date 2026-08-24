@@ -3,6 +3,7 @@ name: Deploy academic site to GitHub Pages
 on:
   push:
     branches: ["main"]
+  pull_request:
   workflow_dispatch:
 
 permissions:
@@ -11,7 +12,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: "pages-${{ github.event_name }}-${{ github.ref }}"
   cancel-in-progress: false
 
 jobs:
@@ -22,24 +23,29 @@ jobs:
         uses: actions/checkout@v6
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
+      - name: Stage Scholar PDF in source tree
+        run: |
+          mkdir -p publications/2026-adm-ashtekar
+          curl --fail --location --silent --show-error \
+            https://raw.githubusercontent.com/ToelUl/adm-to-ashtekar-notes/main/main.pdf \
+            --output publications/2026-adm-ashtekar/paper.pdf
+          test -s publications/2026-adm-ashtekar/paper.pdf
+          test $(stat -c%s publications/2026-adm-ashtekar/paper.pdf) -le 5242880
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: ./_site
-      - name: Stage Scholar PDF
+      - name: Verify staged Scholar PDF in built site
         run: |
-          mkdir -p _site/publications/2026-adm-ashtekar
-          curl --fail --location --silent --show-error \
-            https://raw.githubusercontent.com/ToelUl/adm-to-ashtekar-notes/main/main.pdf \
-            --output _site/publications/2026-adm-ashtekar/paper.pdf
           test -s _site/publications/2026-adm-ashtekar/paper.pdf
           test $(stat -c%s _site/publications/2026-adm-ashtekar/paper.pdf) -le 5242880
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
 
   deploy:
+    if: github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -48,4 +54,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
