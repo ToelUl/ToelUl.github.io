@@ -5,11 +5,6 @@ on:
     branches: ["main"]
   pull_request:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 jobs:
   metadata:
     runs-on: ubuntu-latest
@@ -20,25 +15,3 @@ jobs:
           python-version: "3.12"
       - name: Validate publication records
         run: python scripts/validate_publications.py
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
-      - name: Stage Scholar PDF in source tree
-        run: |
-          mkdir -p publications/2026-adm-ashtekar
-          curl --fail --location --silent --show-error \
-            https://raw.githubusercontent.com/ToelUl/adm-to-ashtekar-notes/main/main.pdf \
-            --output publications/2026-adm-ashtekar/paper.pdf
-          test -s publications/2026-adm-ashtekar/paper.pdf
-          test $(stat -c%s publications/2026-adm-ashtekar/paper.pdf) -le 5242880
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
-      - name: Verify staged Scholar PDF in built site
-        run: |
-          test -s _site/publications/2026-adm-ashtekar/paper.pdf
-          test $(stat -c%s _site/publications/2026-adm-ashtekar/paper.pdf) -le 5242880
-      - name: Package Pages artifact
-        uses: actions/upload-pages-artifact@v4
