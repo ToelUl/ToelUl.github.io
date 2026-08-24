@@ -1,53 +1,85 @@
 # Qian-Rui Lee — Academic Homepage
 
-Minimal academic GitHub Pages site designed around three goals:
+[![Deploy academic site to GitHub Pages](https://github.com/ToelUl/ToelUl.github.io/actions/workflows/pages.yml/badge.svg)](https://github.com/ToelUl/ToelUl.github.io/actions/workflows/pages.yml)
+[![Validate academic metadata](https://github.com/ToelUl/ToelUl.github.io/actions/workflows/validate.yml/badge.svg)](https://github.com/ToelUl/ToelUl.github.io/actions/workflows/validate.yml)
 
-1. a canonical academic identity page;
-2. a maintainable research / publication / software hub;
-3. Google Scholar-friendly landing pages for scholarly works.
+**Academic website:** https://toelul.github.io/
 
-## Deployment
+Source repository for my academic homepage. The site presents my research in theoretical and computational physics, quantum many-body systems, machine learning for physics, geometric and mathematical physics, and scientific computing.
 
-The site is deployed from `main` with GitHub Actions to `https://toelul.github.io/`. The Pages workflow builds Jekyll, stages any deployment-managed scholarly PDFs, uploads the Pages artifact, and deploys it to the `github-pages` environment.
+**Academic profiles:** [Google Scholar](https://scholar.google.com/citations?user=0kikVlsAAAAJ) · [ORCID](https://orcid.org/0009-0009-2250-2419) · [GitHub](https://github.com/ToelUl)
 
-## Academic identity
+## Research focus
 
-Canonical public profile links are stored in `_data/profile.yml`. Google Scholar, ORCID, GitHub, and LinkedIn are currently linked. Contact email and a downloadable PDF CV remain intentionally unset until a public version is chosen.
+My work centers on using physical and mathematical structure—symmetry, geometry, locality, constraints, and scaling—to make difficult problems more interpretable and computationally tractable. Current themes include:
 
-## Publication model
+- quantum many-body physics, critical phenomena, and quantum geometry;
+- generative modeling and Flow Matching for physical systems;
+- equivariant learning and lattice gauge structure;
+- geometric formulations of field theory and gravity;
+- GPU-accelerated simulation and scientific-computing tools.
 
-Each record in `_publications/` is the single source of truth for its title, authors, date/year, publication status, venue, DOI/arXiv/Zenodo links, abstract, selection status, and Scholar-indexing flags.
+## Site contents
 
-Publication categories are intentionally explicit:
+| Section | Purpose |
+| --- | --- |
+| [Research](https://toelul.github.io/research/) | Research directions with links to related papers, notes, and software. |
+| [Publications](https://toelul.github.io/publications/) | Peer-reviewed articles, preprints, and technical notes with stable landing pages. |
+| [Notes](https://toelul.github.io/notes/) | Technical, pedagogical, and working lecture notes kept distinct from journal publications. |
+| [Software](https://toelul.github.io/software/) | Selected research software organized by scientific purpose. |
+| [CV](https://toelul.github.io/cv/) | Web-based academic CV generated from the same structured content. |
 
-- `journal` — peer-reviewed journal articles;
-- `preprint` — public preprints not represented as journal publications;
-- `note` — technical or pedagogical notes.
+## Scholarly publishing and indexing
 
-The home page, publication index, note index, web CV, Highwire citation meta-tags, structured data, and sitemap are generated from these records.
+Publication pages are designed as stable scholarly landing pages rather than simple file listings. Each record can expose:
 
-Run the metadata guard before publication changes:
+- explicit publication status (`journal`, `preprint`, or `note`);
+- DOI, arXiv, Zenodo, and source-code links where applicable;
+- Highwire-style `citation_*` metadata for scholarly crawlers;
+- `ScholarlyArticle` structured data for general search engines;
+- a directly visible abstract without client-side rendering;
+- same-site full-text PDF URLs for selected works when appropriate.
+
+For the ADM-to-Ashtekar technical note, the canonical PDF remains in [`ToelUl/adm-to-ashtekar-notes`](https://github.com/ToelUl/adm-to-ashtekar-notes). The Pages workflow stages that file into the deployed scholarly landing-page directory, avoiding a second manually maintained source copy while preserving a same-site PDF URL for indexing.
+
+## Architecture
+
+The site is deliberately lightweight and static:
+
+- **Jekyll** for templating and content collections;
+- **GitHub Pages** for hosting;
+- **GitHub Actions** for validation, build, PDF staging, and deployment;
+- **YAML front matter** as the publication metadata source of truth;
+- **static HTML navigation** with no JavaScript dependency for discovering scholarly content.
+
+The main content model is organized around `_publications/`, `_data/`, and reusable layouts/includes. Research pages, publication indexes, notes, the web CV, citation metadata, and the sitemap are generated from the same structured records.
+
+## Maintaining publication records
+
+Each scholarly work is represented by one file in `_publications/`. Publication status is explicit rather than inferred:
+
+- `journal` — peer-reviewed journal article;
+- `preprint` — public preprint not represented as a journal publication;
+- `note` — technical or pedagogical note.
+
+Before merging publication changes, run:
 
 ```bash
 python scripts/validate_publications.py
 ```
 
-## Google Scholar test case
+The same check runs automatically in GitHub Actions. The validator checks required bibliographic fields, publication status, Scholar-facing metadata, and the configuration of deployment-managed PDFs.
 
-`_publications/2026-adm-ashtekar.md` is the first dedicated Scholar-indexing test case. It uses the exact title, author, date, DOI, and author-written abstract from the source note.
+## Repository structure
 
-The canonical source PDF remains in `ToelUl/adm-to-ashtekar-notes`. During Pages deployment the workflow stages that PDF into the generated artifact at:
+```text
+_data/          Academic profile and software metadata
+_includes/      Reusable site components
+_layouts/       Page and publication layouts
+_publications/  Structured scholarly records
+assets/         Site styles and static assets
+scripts/        Metadata validation utilities
+.github/        Validation and GitHub Pages workflows
+```
 
-`https://toelul.github.io/publications/2026-adm-ashtekar/paper.pdf`
-
-The landing page therefore emits a same-site `citation_pdf_url` without requiring a second manually maintained PDF copy in this repository.
-
-## Design constraints
-
-- static HTML first; no client-side navigation dependency;
-- one muted accent color and typography-led layout;
-- every scholarly work has its own stable landing page;
-- publication status is explicit rather than inferred;
-- abstracts are visible without JavaScript or user interaction;
-- no automatic citation counts or brittle third-party widgets;
-- research software is curated by scientific purpose, not repository stars.
+The implementation favors long-term maintainability, explicit scholarly metadata, and crawler-friendly static pages over dynamic widgets or presentation-heavy dependencies.
