@@ -16,6 +16,8 @@
       {% if page.arxiv_url %}<a class="button" href="{{ page.arxiv_url }}">arXiv</a>{% endif %}
       {% if page.zenodo_url %}<a class="button" href="{{ page.zenodo_url }}">Zenodo</a>{% endif %}
       {% if page.github_url %}<a class="button" href="{{ page.github_url }}">GitHub</a>{% endif %}
+      {% if page.code_url %}<a class="button" href="{{ page.code_url }}">Code &amp; data</a>{% endif %}
+      {% if page.release_url %}<a class="button" href="{{ page.release_url }}">Release</a>{% endif %}
       {% if page.pdf_local %}<a class="button" href="{{ page.url | append: 'paper.pdf' | relative_url }}">PDF</a>{% elsif page.pdf_external_url %}<a class="button" href="{{ page.pdf_external_url }}">PDF</a>{% endif %}
     </div>
 

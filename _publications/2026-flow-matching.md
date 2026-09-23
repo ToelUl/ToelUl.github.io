@@ -11,6 +11,7 @@ venue: "Machine Learning: Science and Technology"
 journal: "Machine Learning: Science and Technology"
 doi: "10.1088/2632-2153/ae9690"
 doi_url: "https://doi.org/10.1088/2632-2153/ae9690"
+arxiv_id: "2508.15318"
 arxiv_url: "https://arxiv.org/abs/2508.15318"
 github_url: "https://github.com/ToelUl/Flow-to-Field"
 pdf_local: false

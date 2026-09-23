@@ -6,9 +6,9 @@ description: "Peer-reviewed publications, preprints, and technical notes by Qian
 <h1>Publications</h1>
 <p class="lead">Research outputs are separated by publication status. Each work has a stable landing page with bibliographic metadata and links to authoritative versions.</p>
 
-{% assign journals = site.publications | where: 'category', 'journal' | sort: 'year' | reverse %}
-{% assign preprints = site.publications | where: 'category', 'preprint' | sort: 'year' | reverse %}
-{% assign notes = site.publications | where: 'note', true | sort: 'year' | reverse %}
+{% assign journals = site.publications | where: 'category', 'journal' | sort: 'citation_date' | reverse %}
+{% assign preprints = site.publications | where: 'category', 'preprint' | sort: 'citation_date' | reverse %}
+{% assign notes = site.publications | where: 'note', true | sort: 'citation_date' | reverse %}
 
 {% if journals.size > 0 %}
 <section>

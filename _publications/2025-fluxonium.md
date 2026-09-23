@@ -14,6 +14,7 @@ citation_date: "2025/03/15"
 category: "preprint"
 type_label: "Preprint"
 venue: "arXiv:2503.12099"
+arxiv_id: "2503.12099"
 arxiv_url: "https://arxiv.org/abs/2503.12099"
 pdf_local: false
 scholar_index: true

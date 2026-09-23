@@ -15,6 +15,7 @@
 {% if page.firstpage %}<meta name="citation_firstpage" content="{{ page.firstpage }}">{% endif %}
 {% if page.lastpage %}<meta name="citation_lastpage" content="{{ page.lastpage }}">{% endif %}
 {% if page.doi %}<meta name="citation_doi" content="{{ page.doi }}">{% endif %}
+{% if page.arxiv_id %}<meta name="citation_arxiv_id" content="arXiv:{{ page.arxiv_id }}">{% endif %}
 {% if page.report_institution %}<meta name="citation_technical_report_institution" content="{{ page.report_institution | escape }}">{% endif %}
 {% if page.report_number %}<meta name="citation_technical_report_number" content="{{ page.report_number | escape }}">{% endif %}
 {% if page.pdf_local %}<meta name="citation_pdf_url" content="{{ site.url }}{{ page.url }}paper.pdf">{% endif %}
@@ -48,7 +49,8 @@
   "datePublished": "{{ page.citation_date | default: page.year | replace: '/', '-' }}",
   "author": [{% for author in page.authors %}{"@type":"Person","name":{{ author | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]{% if page.journal %},
   "isPartOf": {"@type":"Periodical","name":{{ page.journal | jsonify }}}{% endif %}{% if page.doi %},
-  "identifier": "https://doi.org/{{ page.doi }}"{% endif %}
+  "identifier": "https://doi.org/{{ page.doi }}"{% elsif page.arxiv_id %},
+  "identifier": "https://arxiv.org/abs/{{ page.arxiv_id }}"{% endif %}
 }
 </script>
 {% endif %}
