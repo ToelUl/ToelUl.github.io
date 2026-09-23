@@ -1,3 +1,9 @@
+- name: "Channel Concentration Companion"
+  url: "https://github.com/ToelUl/channel-concentration/tree/companion-2026-09-21-rc1"
+  description: "Versioned code, data, and figure regeneration for the channel-concentration preprint."
+  tags: ["quantum geometry", "critical phenomena", "reproducibility"]
+  selected: true
+
 - name: "Flow-to-Field"
   url: "https://github.com/ToelUl/Flow-to-Field"
   description: "Flow Matching as a reusable, physically informed initializer for Monte Carlo simulations of many-body systems."

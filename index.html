@@ -15,6 +15,21 @@ description: "Qian-Rui Lee — PhD student in physics at National Tsing Hua Univ
   </div>
 </section>
 
+{% assign featured = site.publications | where: 'featured', true | sort: 'citation_date' | reverse | first %}
+{% if featured %}
+<section class="latest-work">
+  <p class="eyebrow">Latest preprint</p>
+  <h2><a href="{{ featured.url | relative_url }}">{{ featured.title }}</a></h2>
+  <p>{{ featured.authors | join: ', ' }} · {{ featured.venue }}</p>
+  <div class="action-row">
+    <a class="button primary" href="{{ featured.url | relative_url }}">Abstract &amp; citation</a>
+    {% if featured.arxiv_url %}<a class="button" href="{{ featured.arxiv_url }}">arXiv</a>{% endif %}
+    {% if featured.code_url %}<a class="button" href="{{ featured.code_url }}">Code &amp; data</a>{% endif %}
+    {% if featured.release_url %}<a class="button" href="{{ featured.release_url }}">Release</a>{% endif %}
+  </div>
+</section>
+{% endif %}
+
 <section>
   <div class="section-heading"><h2>Research</h2><a href="{{ '/research/' | relative_url }}">Research overview →</a></div>
   <div class="research-grid">
@@ -27,7 +42,7 @@ description: "Qian-Rui Lee — PhD student in physics at National Tsing Hua Univ
 
 <section>
   <div class="section-heading"><h2>Selected publications & notes</h2><a href="{{ '/publications/' | relative_url }}">All publications →</a></div>
-  <div class="pub-list">{% assign selected = site.publications | where: 'selected', true | sort: 'year' | reverse %}{% for pub in selected limit:4 %}{% include publication-item.html pub=pub %}{% endfor %}</div>
+  <div class="pub-list">{% assign selected = site.publications | where: 'selected', true | sort: 'citation_date' | reverse %}{% for pub in selected limit:4 %}{% include publication-item.html pub=pub %}{% endfor %}</div>
 </section>
 
 <section>

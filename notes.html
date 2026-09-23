@@ -6,7 +6,7 @@ permalink: /notes/
 <p class="lead">Long-form technical notes and teaching-oriented derivations that are useful as citable research resources but are kept distinct from peer-reviewed publications.</p>
 
 <div class="pub-list full">
-{% assign notes = site.publications | where: 'note', true | sort: 'year' | reverse %}
+{% assign notes = site.publications | where: 'note', true | sort: 'citation_date' | reverse %}
 {% for pub in notes %}{% include publication-item.html pub=pub %}{% endfor %}
 </div>
 

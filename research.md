@@ -11,7 +11,7 @@ My work sits at the interface of theoretical physics, computational physics, and
 
 I am interested in critical behavior, exactly solvable many-body models, lattice systems, and geometric quantities that characterize quantum states and responses. The goal is to connect formal structures to concrete observables and scalable numerical tests.
 
-Related work: [Flow Matching–based Monte Carlo initialization]({{ '/publications/2026-flow-matching/' | relative_url }}) · [Solvable Quantum Many-Body Models](https://github.com/ToelUl/solvable-quantum-many-body-models) · [quantum-simulation](https://github.com/ToelUl/quantum-simulation)
+Related work: [Channel concentration of critical quantum geometry]({{ '/publications/2026-channel-concentration/' | relative_url }}) · [Flow Matching–based Monte Carlo initialization]({{ '/publications/2026-flow-matching/' | relative_url }}) · [Solvable Quantum Many-Body Models](https://github.com/ToelUl/solvable-quantum-many-body-models) · [quantum-simulation](https://github.com/ToelUl/quantum-simulation)
 
 ## Machine learning for physical systems
 

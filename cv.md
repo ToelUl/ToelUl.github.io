@@ -23,14 +23,14 @@ Theoretical and computational many-body physics; critical phenomena; machine lea
 
 ## Publications & preprints
 
-{% assign research_outputs = site.publications | where_exp: 'pub', "pub.category != 'note'" | sort: 'year' | reverse %}
+{% assign research_outputs = site.publications | where_exp: 'pub', "pub.category != 'note'" | sort: 'citation_date' | reverse %}
 {% for pub in research_outputs %}
 - **[{{ pub.title }}]({{ pub.url | relative_url }})** — {{ pub.authors | join: ', ' }}. {{ pub.type_label }}, {{ pub.venue }}, {{ pub.year }}.
 {% endfor %}
 
 ## Technical & pedagogical notes
 
-{% assign notes = site.publications | where: 'note', true | sort: 'year' | reverse %}
+{% assign notes = site.publications | where: 'note', true | sort: 'citation_date' | reverse %}
 {% for pub in notes %}
 - **[{{ pub.title }}]({{ pub.url | relative_url }})** — {{ pub.venue }}, {{ pub.year }}.
 {% endfor %}

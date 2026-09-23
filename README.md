@@ -62,6 +62,12 @@ Each scholarly work is represented by one file in `_publications/`. Publication 
 - `preprint` — public preprint not represented as a journal publication;
 - `note` — technical or pedagogical note.
 
+Use `citation_date` (`YYYY/MM/DD` when known) for chronological ordering. An
+arXiv record should provide both `arxiv_id` and `arxiv_url`; `code_url` and
+`release_url` add separate reproducibility links. Set `selected: true` to show
+a record on the home page and reserve `featured: true` for at most one current
+work, which appears in the home-page preprint callout.
+
 Before merging publication changes, run:
 
 ```bash
